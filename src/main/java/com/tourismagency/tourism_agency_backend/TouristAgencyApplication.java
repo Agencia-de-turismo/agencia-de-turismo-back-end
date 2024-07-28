@@ -5,10 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class TouristAgencyApplication {
-
-        public static void main(String[] args) {
+    public static void main(String[] args) {
             SpringApplication.run(TouristAgencyApplication.class, args);
         }
-
 
 }
