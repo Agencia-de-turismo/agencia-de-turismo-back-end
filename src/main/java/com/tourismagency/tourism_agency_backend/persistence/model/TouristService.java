@@ -4,8 +4,6 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
-public class TouristService {
-
 
 @Entity
 public class TouristService {
