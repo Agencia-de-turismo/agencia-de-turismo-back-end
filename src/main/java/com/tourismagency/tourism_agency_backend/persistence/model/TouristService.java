@@ -1,11 +1,19 @@
 package com.tourismagency.tourism_agency_backend.persistence.model;
 import com.tourismagency.tourism_agency_backend.enums.CountryEnum;
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.LocalDate;
 
-
+@ToString
+@EqualsAndHashCode
+@Builder
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@Table(name = "tourist_service")
 public class TouristService {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,6 +24,5 @@ public class TouristService {
     private CountryEnum destiny;
     private LocalDate date;
     private Double price;
-
 
 }
