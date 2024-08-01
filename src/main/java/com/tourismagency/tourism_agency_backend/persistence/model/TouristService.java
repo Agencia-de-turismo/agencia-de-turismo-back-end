@@ -24,5 +24,4 @@ public class TouristService {
     private CountryEnum destiny;
     private LocalDate date;
     private Double price;
-
 }
