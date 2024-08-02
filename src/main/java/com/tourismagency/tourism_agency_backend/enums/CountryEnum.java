@@ -6,5 +6,5 @@ public enum CountryEnum {
         ITALY,
         PERU,
         COLOMBIA,
-        ECUADOR;
+        ECUADOR
 }
