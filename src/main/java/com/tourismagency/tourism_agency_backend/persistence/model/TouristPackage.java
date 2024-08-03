@@ -14,7 +14,6 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "tourist_package")
-
 public class TouristPackage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
