@@ -21,7 +21,8 @@ public class TouristPackage {
     private Double price;
 
     //Un TouristPackage tiene 1 o muchos TouristServices
-    @OneToMany
+    //fetch = FetchType.LAZY, cascade = CascadeType.PERSIST
+    @OneToMany(targetEntity = TouristPackage.class)
     @JoinColumn(name = "tourist_package_id")
     private List<TouristService> touristServicesList;
 
