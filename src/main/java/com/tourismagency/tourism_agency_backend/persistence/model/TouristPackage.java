@@ -6,7 +6,7 @@ import java.util.List;
 
 
 @ToString
-@EqualsAndHashCode
+@EqualsAndHashCode(exclude = {"touristServicesList"})
 @Builder
 @Getter
 @Setter
@@ -20,11 +20,9 @@ public class TouristPackage {
     private Long id;
     private Double price;
 
-    //Un TouristPackage tiene 1 o muchos TouristServices
-    //fetch = FetchType.LAZY, cascade = CascadeType.PERSIST
-    @OneToMany(targetEntity = TouristPackage.class)
-    @JoinColumn(name = "tourist_package_id")
+    @ManyToMany(targetEntity = TouristPackage.class, fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    @JoinTable(name="tourist_package_tourist_service",
+            joinColumns = @JoinColumn(name = "tourist_package_id"),
+            inverseJoinColumns = @JoinColumn(name = "tourist_service_id"))
     private List<TouristService> touristServicesList;
-
-
 }
