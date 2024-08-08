@@ -8,7 +8,7 @@ import java.util.List;
 
 @Builder
 
-public record TouristPackageDTO( Long id, Double price, List<TouristService> touristServicesList)
+public record TouristPackageDTO( Long id, Double price, List<TouristServiceDTO> touristServicesListDTO)
         implements Serializable {
 
 }
