@@ -5,9 +5,10 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @ToString
-@EqualsAndHashCode
+@EqualsAndHashCode(exclude = {"salesList"})
 @Builder
 @Getter
 @Setter
@@ -34,4 +35,7 @@ public class TouristService {
 
     @Enumerated (EnumType.STRING)
     private ServiceTypeEnum serviceType;
+
+    @ManyToMany(mappedBy = "touristServicesList", targetEntity = Sale.class, fetch = FetchType.LAZY)
+    private List<Sale> salesList;
 }
