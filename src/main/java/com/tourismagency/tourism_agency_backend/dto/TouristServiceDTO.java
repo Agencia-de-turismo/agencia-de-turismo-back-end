@@ -1,4 +1,4 @@
-package com.tourismagency.tourism_agency_backend.dtos;
+package com.tourismagency.tourism_agency_backend.dto;
 
 import com.tourismagency.tourism_agency_backend.enums.CountryEnum;
 import lombok.*;
