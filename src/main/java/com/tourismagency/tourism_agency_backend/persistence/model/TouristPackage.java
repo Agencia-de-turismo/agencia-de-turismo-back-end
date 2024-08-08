@@ -25,4 +25,7 @@ public class TouristPackage {
             joinColumns = @JoinColumn(name = "tourist_package_id"),
             inverseJoinColumns = @JoinColumn(name = "tourist_service_id"))
     private List<TouristService> touristServicesList;
+
+    @ManyToMany(mappedBy = "touristPackagesList", targetEntity = Sale.class, fetch = FetchType.LAZY)
+    private List<Sale> salesList;
 }
